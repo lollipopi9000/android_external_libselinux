@@ -896,7 +896,6 @@ static bool compute_contexts_hash(const struct selinux_opt opts[], uint8_t c_dig
         close(fd);
         return false;
     }
-    SHA_hash(map, sb.st_size, c_digest);
     munmap(map, sb.st_size);
     close(fd);
 
